@@ -1,0 +1,148 @@
+<html>
+
+<head>
+</head>
+
+<style>
+    #trapezoid {
+        position: absolute;
+        top: 71vmin;
+        left: 35vmin;
+        width: 30vmin;
+        height: 10vmin;
+        background-color: black;
+        border: 2px solid black;
+        transform: perspective(2em)
+        rotateX(10deg);
+    }
+    
+    #circle {
+        position: absolute;
+        top: 25vmin;
+        left: 25vmin;
+        width: 50vmin;
+        height: 50vmin;
+        border-radius: 50%;
+        border: 2px solid black;
+        overflow: hidden;
+    }
+    
+    #background {
+        position: absolute;
+        top: -1%;
+        left: -1%;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        border: 2px solid black;
+        z-index: 0;
+    }
+    
+    #ground {
+        position: absolute;
+        top: 80%;
+        left: 10%;
+        width: 80%;
+        height: 20%;
+        background-color: white;
+        border: 2px solid black;
+        z-index: 1;
+    }
+    
+    #wood { 
+        position: absolute;
+        top: 64%;
+        left: 40%;
+        width: 20%;
+        height: 20%;
+        background-color: hsl(20, 100%, 30%);
+        border: 1px solid black;
+        z-index: 2;
+    }
+    
+    #tree { 
+        position: absolute;
+        top: 17%;
+        left: 25%;
+        width: 50%;
+        height: 55%;
+        background-color: hsl(90, 100%, 20%);
+        clip-path: polygon(0 100%, 100% 100%, 50% 0);
+        border: 1px solid black;
+        z-index: 3;
+    }
+    
+    #orn1{
+        position: absolute;
+        top: 55%;
+        left: 36%;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+        background-color: hsl(120, 100%, 40%);
+        z-index: 4;
+        animation: flashing 1s infinite;
+    }
+    
+    #orn2 {position: absolute;
+        top: 35%;
+        left: 50%;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+        background-color: hsl(0, 100%, 50%);
+        z-index: 4;
+        animation: flashing 1s infinite;
+    }
+    
+    #orn3 {
+        position: absolute;
+        top: 63%;
+        left: 63%;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+        background-color: hsl(0, 100%, 50%);
+        z-index: 4;
+        animation: flashing 1s infinite;
+    }
+    
+    @keyframes flashing {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    
+    #orn4 {
+        position: absolute;
+        top: 71%;
+        left: 30%;
+        width: 5%;
+        height: 5%;
+        border-radius: 50%;
+        background-color: hsl(0, 100%, 50%);
+        z-index: 4;
+        animation: fall 1s infinite;
+    }
+    
+    @keyframes fall {
+        from{transform: scaleY(1) translateY(0);}
+        to{transform: scaleY(1.1) translateY(5vmin);}
+    }
+    
+</style>
+
+<body>
+    <div id="trapezoid"></div>
+    <div id="circle">
+        <div id="background"></div>
+        <div id="ground"></div>
+        <div id="wood"></div>
+        <div id="tree"></div>
+        <div id="orn1"></div>
+        <div id="orn2"></div>
+        <div id="orn3"></div>
+        <div id="orn4"></div>
+    </div>
+</body>
+
+</html>
